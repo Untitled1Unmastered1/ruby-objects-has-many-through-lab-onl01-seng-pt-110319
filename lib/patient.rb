@@ -25,8 +25,7 @@ class Patient
 
   def doctors
     appointments.map do |appointment,date|
-      appointment.doctor 
-      date.doctor 
+      appointment.doctor << date.doctor 
     end 
   end
 end
