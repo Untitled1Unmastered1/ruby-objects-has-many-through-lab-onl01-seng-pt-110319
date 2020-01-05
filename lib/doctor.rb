@@ -1,42 +1,27 @@
-class Doctor 
+require 'pry'
+class Doctor
+
   attr_accessor :name
-  
   @@all = []
-  
+
   def initialize(name)
-    @name = name 
+    @name = name
     @@all << self
-  end 
+  end
+
+  def appointments
+    Appointment.all.select {|appointment| appointment.doctor == self}
+  end
   
-  def new_appointment
-    Patient.new(patient,date)
+  def patients
+    appointments.select {|appointment| appointment.patient}
+  end
 
+  def self.all
+    @@all
+  end
 
-
-# require 'pry'
-# class Doctor
-
-#   attr_accessor :name
-#   @@all = []
-
-#   def initialize(name)
-#     @name = name
-#     @@all << self
-#   end
-
-#   def appointments
-#     Appointment.all.select {|appointment| appointment.doctor == self}
-#   end
-  
-#   def patients
-#     appointments.select {|appointment| appointment.patient}
-#   end
-
-#   def self.all
-#     @@all
-#   end
-
-#   def new_appointment(patient, date)
-#     Appointment.new(patient, date, self)
-#   end
-# end
+  def new_appointment(patient, date)
+    Appointment.new(patient, date, self)
+  end
+end
