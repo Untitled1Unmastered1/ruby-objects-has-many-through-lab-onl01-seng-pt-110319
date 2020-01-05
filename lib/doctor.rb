@@ -13,7 +13,6 @@ class Doctor
   end
   
   def patients
-    binding.pry 
     appointments.select {|appointment| appointment.patient}
   end
 
