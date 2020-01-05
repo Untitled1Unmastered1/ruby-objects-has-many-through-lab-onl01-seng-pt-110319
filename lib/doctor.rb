@@ -10,8 +10,8 @@ class Doctor
 
   def appointments
     Appointment.all.select {|appointment| appointment.doctor == self}
-    binding.pry 
   end
+  binding.pry 
 
   def patients
     appointments.map {|appointment| appointment.patient}
