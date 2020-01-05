@@ -1,3 +1,4 @@
+require 'pry'
 class Appointment
 
   attr_reader :patient, :doctor, :date
@@ -8,6 +9,7 @@ class Appointment
     @patient = patient
     @doctor = doctor
     @date = date
+    binding.pry 
     @@all << self
   end
 
