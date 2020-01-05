@@ -14,7 +14,6 @@ class Doctor
   end
 
   def patients
-    binding.pry 
     appointments.map {|name| name.appointments }
   end
 
