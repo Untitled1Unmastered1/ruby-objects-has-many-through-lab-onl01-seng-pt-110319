@@ -5,11 +5,10 @@ class Appointment
 
   @@all = []
 
-  def initialize(patient ="", doctor = "", date = "")
+  def initialize(doctor = "", patient ="", date = "")
     @patient = patient
     @doctor = doctor
     @date = date
-    binding.pry 
     @@all << self
   end
 
