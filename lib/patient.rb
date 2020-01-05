@@ -1,7 +1,7 @@
 require 'pry'
 class Patient
-
   attr_accessor :name, :appointment, :doctor
+  
   @@all = []
 
   def initialize(name)
