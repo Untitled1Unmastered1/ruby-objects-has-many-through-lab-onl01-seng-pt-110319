@@ -9,7 +9,7 @@ class Appointment
     @date = date
     @doctor = doctor
     @@all << self
-    binding.pry 
+    binding.pry
   end
 
   def self.all
