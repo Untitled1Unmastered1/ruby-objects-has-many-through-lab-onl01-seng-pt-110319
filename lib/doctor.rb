@@ -22,7 +22,7 @@ class Doctor
       appointment.doctor == self
     end
   end
-  appointments.doctor
+  appointments
   end 
 
   def patients
