@@ -22,8 +22,6 @@ class Doctor
       appointment.doctor == self
     end
   end
-  self.appointments
-  end 
 
   def patients
     appointments.map do |appointment|
