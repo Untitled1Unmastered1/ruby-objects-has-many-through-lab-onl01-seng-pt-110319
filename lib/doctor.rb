@@ -15,9 +15,8 @@ class Doctor
   
   def new_appointment(patient, date)
     Appointment.new(date, patient, self)
-    binding.pry 
   end
-#line 16 reverse arguments if no go 
+
   def appointments
     Appointment.all.select do |appointment|
       appointment.doctor == self 
